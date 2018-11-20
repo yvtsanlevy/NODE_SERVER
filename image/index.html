@@ -1,0 +1,557 @@
+    <html>
+     <head>
+   </head>
+   <canvas id="myCanvas" width="600" height="600" style="border: 1px solid black;">
+           
+        </canvas>
+<link rel="stylesheet" type="text/css" href="image.css"> 
+
+<body >
+<div class="hidden">
+  <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+      var images = new Array()
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image()
+          
+          // images[i].crossOrigin="Anonymous"
+          // images[i].setAttribute('crossOrigin', 'anonymous');
+          images[i].src = preload.arguments[i]
+        }
+      }
+      preload(
+
+     '6x4.jpg',
+     '8x6.jpg',
+     '10x10.jpg',
+     '16x16.jpg',
+     '20x20.jpg',
+     '2x4 br.jpg',
+     '2x8 br.jpg',
+     '2x10.jpg',
+     '3x2 ore1.jpg',
+     '4x5 bl.jpg',
+     '5x5 ze (2).jpg',
+     '5x10 bl1.jpg',
+     '8x3.jpg',
+     '8x5 pi.jpg',
+     '8x8 bl.jpg',
+     '8x8 pi.jpg',
+     '8x8 re.jpg',
+     '8x8 ye.jpg',
+     '8x20 c-3.jpg',
+     '10x10 pi 1.jpg',
+     '10x10 pi.jpg',
+     '10x10 pu1.jpg',
+     '10x10 re.jpg',
+     '10x10 ze.jpg',
+     '12x10 gr.jpg',
+     '12x12 pi 2.jpg',
+     '13x40 c-3 gr.jpg',
+     '15x20 pen pi.jpg',
+     '15x25 c-2.jpg',
+     '18x18.jpg',
+     '20x20 br1.jpg',
+     '20x25 c-2 bl1.jpg',
+     '20x25 c-2 bl2.jpg',
+     'neck1.jpg',
+     'neck2.jpg',
+     'neck3.jpg',
+     'neck4.jpg',
+     'neck5.jpg'
+
+      )
+    
+  </script>
+
+
+<div id="myDIV">
+    
+     <div class="card">
+       <img id= '6x4' src='6x4.jpg'alt="Avatar" width='10' height="15">
+         <div class="con">
+         <h4><b>6x4</b></h4> 
+         <p>Wood bead</p> 
+         <p><button onclick="changeBeed(findeBeed('6x4.jpg',beeds),thisIndex,thisArray)">change bead</button></p>
+         <p><button onclick="addBeedToNeck(findeBeed('6x4.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+    <div class="card">
+       <img id= '16x16' src='16x16.jpg'alt="Avatar" width='40' height="40">
+         <div class="con">
+         <h4><b>16x16</b></h4> 
+         <p>Wood bead</p> 
+          <p><button onclick="changeBeed(findeBeed('16x16.jpg',beeds),thisIndex,thisArray)">change bead</button></p>
+            <p><button onclick="addBeedToNeck(findeBeed('16x16.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+
+    <div class="card">
+       <img id= '20x20' src='20x20.jpg'alt="Avatar" width='50' height="50">
+         <div class="con">
+         <h4><b>20x20</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('20x20.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('20x20.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+
+    <div class="card">
+       <img id= '8x6' src='8x6.jpg'alt="Avatar" width='15' height="20">
+         <div class="con">
+         <h4><b>8x6</b></h4> 
+         <p>Wood bead</p> 
+         <p><button onclick="changeBeed(findeBeed('8x6.jpg',beeds),thisIndex,thisArray)">change bead</button></p>
+           <p><button onclick="addBeedToNeck(findeBeed('8x6.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+
+    <div class="card">
+       <img id= '10x10' src='10x10.jpg'alt="Avatar" width='25' height="25">
+         <div class="con">
+         <h4><b>10x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('10x10.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('10x10.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+
+       <div class="card">
+       <img id= '2x4 br' src='2x4 br.jpg'alt="Avatar" width='5' height="10">
+         <div class="con">
+         <h4><b>2x4</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('2x4 br',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('2x4 br.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '2x8 br' src='2x8 br.jpg'alt="Avatar" width='5' height="20">
+         <div class="con">
+         <h4><b>2x8</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('2x8 br.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('2x8 br.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '2x10' src='2x10.jpg'alt="Avatar" width='5' height="25">
+         <div class="con">
+         <h4><b>2x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('2x10.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('2x10.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '3x2 ore1' src='3x2 ore1.jpg'alt="Avatar" width='7.5' height="5">
+         <div class="con">
+         <h4><b>3x2</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('3x2 ore1',beeds),thisIndex,thisArray)">change bead</button></p>
+           <p><button onclick="addBeedToNeck(findeBeed('3x2 ore1.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p> 
+         </div>
+    </div>
+     <div class="card">
+       <img id= '4x5 bl' src='4x5 bl.jpg'alt="Avatar" width='10' height="12.5">
+         <div class="con">
+         <h4><b>4x5</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('4x5 bl.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('4x5 bl.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '5x5 ze (2)' src='5x5 ze (2).jpg'alt="Avatar" width='12.5' height="12.5">
+         <div class="con">
+         <h4><b>5x5</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('5x5 ze (2).jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('5x5 ze (2).jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '5x10 bl1' src='5x10 bl1.jpg'alt="Avatar" width='12.5' height="25">
+         <div class="con">
+         <h4><b>5x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('5x10 bl1.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('5x10 bl1.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x3' src='8x3.jpg'alt="Avatar" width='20' height="7.5">
+         <div class="con">
+         <h4><b>8x3</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x3.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x3.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x5 pi' src='8x5 pi.jpg'alt="Avatar" width='20' height="12.5">
+         <div class="con">
+         <h4><b>8x5</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x5 pi.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x5 pi.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x8 bl' src='8x8 bl.jpg'alt="Avatar" width='20' height="20">
+         <div class="con">
+         <h4><b>8x8</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x8 bl.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x8 bl.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x8 pi' src='8x8 pi.jpg'alt="Avatar" width='20' height="20">
+         <div class="con">
+         <h4><b>8x8</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x8 pi.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x8 pi.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x8 re' src='8x8 re.jpg'alt="Avatar" width='20' height="20">
+         <div class="con">
+         <h4><b>8x8</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x8 re.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x8 re.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x8 ye' src='8x8 ye.jpg'alt="Avatar" width='20' height="20">
+         <div class="con">
+         <h4><b>8x8</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x8 ye.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x8 ye.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '8x20 c-3' src='8x20 c-3.jpg'alt="Avatar" width='20' height="50">
+         <div class="con">
+         <h4><b>8x20</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('8x20 c-3.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('8x20 c-3.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '10x10 pi 1' src='10x10 pi 1.jpg'alt="Avatar" width='25' height="25">
+         <div class="con">
+         <h4><b>10x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('10x10 pi 1.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('10x10 pi 1.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '10x10 pi' src='10x10 pi.jpg'alt="Avatar" width='25' height="25">
+         <div class="con">
+         <h4><b>10x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('10x10 pi.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('10x10 pi.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '10x10 pu1' src='10x10 pu1.jpg'alt="Avatar" width='25' height="25">
+         <div class="con">
+         <h4><b>10x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('10x10 pu1.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('10x10 pu1.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '10x10 re' src='10x10 re.jpg'alt="Avatar" width='25' height="25">
+         <div class="con">
+         <h4><b>10x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('10x10 re.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('10x10 re.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '10x10 ze' src='10x10 ze.jpg'alt="Avatar" width='25' height="25">
+         <div class="con">
+         <h4><b>10x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('10x10 ze.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('10x10 ze.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '12x10 gr' src='12x10 gr.jpg'alt="Avatar" width='30' height="25">
+         <div class="con">
+         <h4><b>12x10</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('12x10 gr.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('12x10 gr.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '12x12 pi 2' src='12x12 pi 2.jpg'alt="Avatar" width='30' height="30">
+         <div class="con">
+         <h4><b>12x12</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('12x12 pi 2.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('12x12 pi 2.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '13x40 c-3 gr' src='13x40 c-3 gr.jpg'alt="Avatar" width='32.5' height="60">
+         <div class="con">
+         <h4><b>13x40</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('13x40 c-3 gr.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('13x40 c-3 gr.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '15x20 pen pi' src='15x20 pen pi.jpg'alt="Avatar" width='37.5' height="50">
+         <div class="con">
+         <h4><b>15x20</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('15x20 pen pi.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('15x20 pen pi.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '15x25 c-2' src='15x25 c-2.jpg'alt="Avatar" width='37.5' height="62.5">
+         <div class="con">
+         <h4><b>15x25</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('15x25 c-2.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('15x25 c-2.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '20x20 br1' src='20x20 br1.jpg'alt="Avatar" width='50' height="50">
+         <div class="con">
+         <h4><b>20x20</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('20x20 br1.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('20x20 br1.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '18x18' src='18x18.jpg'alt="Avatar" width='45' height="45">
+         <div class="con">
+         <h4><b>18x18</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('18x18.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('18x18.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '20x25 c-2 bl1' src='20x25 c-2 bl1.jpg'alt="Avatar" width='50' height="57.5">
+         <div class="con">
+         <h4><b>20x25</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('20x25 c-2 bl1.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+           <p><button onclick="addBeedToNeck(findeBeed('20x25 c-2 bl1.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p>
+         </div>
+    </div>
+     <div class="card">
+       <img id= '20x25 c-2 bl2' src='20x25 c-2 bl2.jpg'alt="Avatar" width='50' height="57.5">
+         <div class="con">
+         <h4><b>20x25</b></h4> 
+         <p>Wood bead</p>
+         <p><button onclick="changeBeed(findeBeed('20x25 c-2 bl2.jpg',beeds),thisIndex,thisArray)">change bead</button></p> 
+         <p><button onclick="addBeedToNeck(findeBeed('20x25 c-2 bl2.jpg',beeds),thisIndex,thisArray)">Add a bead</button></p> 
+         </div>
+    </div>
+    
+
+
+</div>
+
+
+  <!-- <a href=# class="button" id="btn-download">Download</a> -->
+</div>
+      <div id = "container">
+       
+        </div>
+        <div id = "parabola">
+            
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <span class="btn-group" id="btn-group">
+  <button class="button" onclick="delet(thisIndex,thisArray)">delet</button>
+  <button class="button" onclick="show()">add</button>
+  <button class="button" onclick="show()">replace</button>  </span>
+  </div>
+
+</div>
+
+        <script type="text/javascript" src="image.js">
+       
+   </script>
+
+   <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+#row{
+  position: fixed;
+  display: none;
+  z-index: 1
+   left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; 
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    z-index: 9
+}
+
+#myDIV {
+  display: none;
+    width: 200px;
+    height: 400px;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+   overflow: auto;
+   left: 650px;
+  
+}
+ 
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- The four columns -->
+<div class="row" id ='r'>
+  <div class="column">
+    <img  id= 'neck5' src="neck5.jpg" alt="Nature" style="width:100%" onclick="choisNeck(this);">
+  </div>
+  <div class="column">
+    <img id= 'neck2' src="neck2.jpg" alt="Snow" style="width:100%" onclick="choisNeck(this);">
+  </div>
+  <div class="column">
+    <img id= 'neck3' src="neck3.jpg" alt="Mountains" style="width:100%" onclick="choisNeck(this);">
+  </div>
+  <div class="column">
+    <img id= 'neck1' src="neck1.jpg" alt="Lights" style="width:100%" onclick="choisNeck(this);">
+  </div>
+</div>
+
+<!-- <div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div> -->
+
+<script>
+ var x= document.getElementById("r");
+   x.style.display="block";
+
+
+function choisNeck(img){
+   
+  
+  for(i=0;i<necklaces.length;i++){
+    if(img.id===necklaces[i].id){
+     
+      x.style.display="none";
+      clear();
+      plotWindow();
+      placeBeads(necklaces[i]);
+      
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+   <script>
+function show() {
+   modal.style.display = "none"
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+   <!-- <script type="text/javascript" src="script.js"></script> -->
+</body>
+
+    </html>
